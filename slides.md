@@ -1,167 +1,226 @@
-
 ## Slide 01
-title: i love dan
-image: slide05.JPG
-notes: Welcome everyone! Today we're exploring ==Agentic AI== and its applications at the DRC Research Center.
-links:
-- https://www.anthropic.com/research | Anthropic Research
-- https://openai.com/research | OpenAI Research
+title: Agentic AI & DRC
+image: slide01.jpg
+notes: Hi
 
 ## Slide 02
-title: 2025: The Year of the Agent (That Wasn’t)
-image: ChatGPT Image Feb 15, 2026, 06_43_56 PM.png
-notes: 2025 was declared the year of Agentic AI.  
-Sam Altman predicted autonomous digital workers would transform how we operate.
+title: 2025: The Year of the Agent (That Wasn't)
+image: slide02.JPG
+notes: 2025 was declared the ==year of Agentic AI==. Sam Altman predicted autonomous digital workers would transform how we operate. But it didn't really happen.
 
-But it didn’t really happen.  
-Agents were impressive in demos — unreliable in production.
+Agents were impressive in demos — ==unreliable in production==. The problem wasn't intelligence. It was architecture.
 
-The problem wasn’t intelligence.  
-It was architecture.
-
-So now the question is:  
-Was the hype wrong — or was the system design wrong?
+So now the question is: Was the hype wrong — or was the system design wrong?
 links:
-- https://fortune.com/2025/12/15/agentic-artificial-intelligence-automation-capital-one/
-- https://skooloflife.medium.com/the-agentic-ai-delusion-why-silicon-valley-spent-billions-on-the-wrong-architecture-d14e4488bd70 
+- https://fortune.com/2025/12/15/agentic-artificial-intelligence-automation-capital-one/ | Fortune: Agentic AI Automation
+- https://skooloflife.medium.com/the-agentic-ai-delusion-why-silicon-valley-spent-billions-on-the-wrong-architecture-d14e4488bd70 | The Agentic AI Delusion
 
 ## Slide 03
-title: why now?
-image: slide03.jpg
-notes: Why now? Three key factors:
-- Computing power has reached critical thresholds
-- ==Training data== quality and quantity have improved exponentially
-- Regulatory frameworks are beginning to emerge
+title: Why Now? Why Agents Are Suddenly Possible
+image: Screenshot 2026-02-15 113151.jpg
+notes: Several things matured at once. Models improved in ==reasoning and tool use==. Cloud infrastructure became cheaper and persistent. APIs became standardized.
 
-The convergence of these factors creates a unique opportunity.
+We moved from prompt engineering → workflows → tool use → orchestration.
+
+The shift wasn't just smarter AI. It was the ==ecosystem becoming executable==. And as AI fluency grows over time, humans and organizations can now reliably build and manage complex agent interactions.
+links:
+- https://engineeringenablement.substack.com/p/your-7-step-ai-upskilling-roadmap
 
 ## Slide 04
-title: The SHIFT
-image: slide04.jpg
-notes: We're witnessing a fundamental ==paradigm shift== from reactive to proactive AI systems.
+title: The Paradigm Shift
+image: slide04.JPG
+notes: Legacy AI answered questions. ==Agentic AI completes objectives==.
 
-Traditional AI responds to queries. ==Agentic AI== takes initiative, plans ahead, and executes complex multi-step workflows.
+We move from: "How do I do this?" To: "Get this done for me."
+
+This is delegation. From conversation → to execution. From assistance → to ==digital labor==.
 
 ## Slide 05
-title: Agent platforms
-image: slide05.jpg
-notes: The agent platform ecosystem includes:
-- AutoGPT and BabyAGI for general purpose tasks
-- LangChain for building custom workflows
-- Specialized platforms for ==domain-specific applications==
+title: Platforms: Persistent Agent Stacks
+image: slide05.JPG
+notes: Frameworks like ==OpenClaw== made agents persistent. They don't disappear after chat. They maintain memory. They coordinate roles.
 
-Each platform offers different tradeoffs between flexibility and ease of use.
+The idea isn't one chatbot. It's a ==digital team==.
+
+This transforms AI from tool into infrastructure.
+links:
+- https://www.moltbook.com/ | Molt Book
+- https://openclaw.ai/ | OpenClaw Platform
 
 ## Slide 06
-title: OpenClaw
-image: slide06.jpg
-notes: OpenClaw represents our ==in-house development== of an agent framework specifically designed for research applications.
+title: The AI Adoption Gap
+image: slide08.JPG
+notes: Some organizations are building agent stacks. Others still use AI like Google. This creates an ==adoption gap==.
 
-Key features include reproducibility, transparency, and integration with existing research tools.
+Productivity diverges. Capability diverges.
+
+The real risk isn't overinvesting. It's underestimating the shift. We don't want to be on the passive side of that gap.
+links:
+- https://www.microsoft.com/en-us/corporate-responsibility/topics/ai-economy-institute/reports/global-ai-adoption-2025/ | Microsoft: Global AI Adoption 2025
+- https://www.linkedin.com/pulse/ai-adoption-gap-why-so-many-projects-fail-how-fix-aleksandra-stach-a40he | AI Adoption Gap Analysis
 
 ## Slide 07
-title: Adoption Gap
-image: slide07.jpg
-notes: There's a significant ==adoption gap== between available technology and actual implementation in research settings.
+title: Automation vs Workflow vs Agent
+image: slide09 (3).JPG
+notes: ==Automation is deterministic==. If X → do Y.
 
-Barriers include: technical complexity, lack of training, and institutional resistance to change.
+AI workflows embed LLMs into structured pipelines. Flexible, but still controlled.
+
+==Agents are goal-driven systems==. They plan, decide, and act autonomously. But autonomy reduces reliability.
+
+So the real design question is: Where do we allow flexibility — and where do we enforce control?
 
 ## Slide 08
-title: What is it?
-image: slide08.jpg
-notes: What exactly is an AI agent? Think of it as a ==goal-oriented system== that can:
-- Perceive its environment
-- Make autonomous decisions
-- Take actions to achieve objectives
+title: What Is Agentic AI?
+image: Slide10.JPG
+notes: Agentic AI has three core elements: ==Autonomy. Goal orientation. Agency within an environment.==
 
 ## Slide 09
-title: What is it?
-image: slide09.jpg
-notes: Agents differ from traditional software in their ability to handle ==ambiguous situations== and adapt their strategies based on feedback.
+title: What Is Agentic AI?
+image: Slide11.JPG
+notes: It reasons step-by-step. It stores memory. It uses tools.
 
-They don't just follow pre-programmed rules - they learn and evolve.
+An agent doesn't just generate text. It interacts with systems and produces outcomes.
 
 ## Slide 10
-title: What is it?
-image: slide10.jpg
-notes: The architecture typically includes:
-- Perception modules for gathering information
-- ==Reasoning engines== for decision-making
-- Action mechanisms for executing tasks
-- Memory systems for learning
+title: What Can Agents Do?
+image: Slide12.JPG
+notes: Agents can:
+- Conduct deep research
+- Summarize project tools
+- Generate schedules
+- Explore codebases
+- Publish content
+
+These are not chat tasks. They are ==coordination tasks==. That's why multi-agent systems emerge.
 
 ## Slide 11
-title: What is it?
-image: slide11.jpg
-notes: Modern agents leverage ==large language models== as their cognitive core, combined with specialized tools for specific tasks.
+title: Agents as Teams
+image: slide10.jpg
+notes: The real power isn't one super-agent. It's ==structured specialization==.
 
-This hybrid approach provides both flexibility and reliability.
+Research agent. Analysis agent. Simulation agent. Coordinator agent.
+
+Each has constraints and responsibilities. This becomes organizational design — not prompting.
+
+## Slide 11
+title: Why This Matters for Urban Planning
+image: slide11.jpg
+notes: Urban planning is complex. Regulations. Stakeholders. Data layers. Long timelines.
+
+This is a ==coordination problem==.
+
+Agents can aggregate zoning data, simulate scenarios, analyze compliance, synthesize reports. But not as one super-agent. As a structured human–agent team.
+links:
+- https://link.springer.com/article/10.1007/s44212-025-00079-7 | Conceptualizing Agentic Urban AI
 
 ## Slide 12
-title: Use Cases
+title: From Smart City Automation to Agentic Urban AI
 image: slide12.jpg
-notes: Use cases in research include:
-- Literature review and synthesis
-- ==Experimental design== and optimization
-- Data analysis and visualization
-- Report generation and documentation
+notes: Three recent papers argue that cities are shifting from ==smart automation to Agentic Urban AI==.
+
+**Automation** follows rules. **Autonomy** optimizes human goals. **Agency** sets and adapts its own goals.
+
+Instead of just improving traffic flow, an agentic system might prioritize resilience or sustainability based on environmental feedback.
+
+Cities become ==cognitive ecosystems==. AI moves from copilot to governance participant. But this requires strong, democratic oversight.
+links:
+- https://link.springer.com/article/10.1007/s44212-025-00079-7 | Conceptualizing Agentic Urban AI
+- https://www.arxiv.org/abs/2507.14730 | Beyond Automation Paper
+- https://www.mdpi.com/2673-4052/6/3/29 | Towards Urban Planning AI Agent
 
 ## Slide 13
-title: Agentic AI & Urban Planning
+title: Agentic Urban AI in Practice
 image: slide13.jpg
-notes: In urban planning, agents can analyze ==demographic data==, traffic patterns, and environmental factors simultaneously.
+notes: At the ==City Science Lab in Taipei==, researchers are building agentic systems that simulate cities, analyze spatial data, and automate planning tasks.
 
-This holistic approach reveals insights that traditional methods might miss.
+Not dashboards. Not static models. But AI agents that reason, collaborate, and test urban futures.
+
+This is what Agentic Urban AI looks like in practice.
+links:
+- https://www.youtube.com/watch?v=NUGfJmLnn4A&t=1145s | City Science Lab Demo
 
 ## Slide 14
-title: Agentic AI & Urban Planning
+title: Urban Mobility Simulator
 image: slide14.jpg
-notes: They can simulate different ==development scenarios== and predict their long-term impacts on communities.
+notes: The ==Urban Mobility Simulator== creates a digital twin of a city. It populates it with thousands of simulated citizens — each generated by an LLM using census data.
 
-This enables evidence-based policy making with unprecedented detail.
+Age, income, profession, daily habits. Each agent receives a backstory and full-day itinerary.
+
+When 10,000 agents move simultaneously, their trips aggregate into heat maps. Planners can test policy scenarios — zoning changes, bus routes, density shifts — in a ==safe sandbox== before implementing them.
+links:
+- https://www.youtube.com/watch?v=NUGfJmLnn4A&t=1145s | Urban Mobility Simulator Demo
 
 ## Slide 15
-title: Agentic AI & Urban Planning
+title: City AI (CDAI)
 image: slide15.jpg
-notes: Integration with ==GIS systems== allows agents to work with spatial data and create visual representations of planning alternatives.
+notes: ==City AI automates complex urban analytics==. Instead of manually buffering maps or intersecting GIS layers, planners ask a question in natural language.
 
-The combination of AI reasoning and geographic context is particularly powerful.
+Behind the scenes, specialized agents collaborate: A **Project Manager** breaks down the task. A **Data Agent** retrieves datasets. A **Visualization Agent** presents results.
+
+Future versions even introduce "curiosity" — agents that explore anomalies and report insights proactively. Urban intelligence becomes accessible — not just technical.
+links:
+- https://www.youtube.com/watch?v=NUGfJmLnn4A&t=1145s | City AI Demo
 
 ## Slide 16
-title: Agentic AI & Urban Planning
+title: Roles of Agentic AI in Urban Planning
 image: slide16.jpg
-notes: Agents can engage with ==stakeholder feedback== by analyzing community input and identifying common themes and concerns.
+notes: Agentic AI in urban planning acts like a ==digital planning team==.
 
-This makes the planning process more participatory and responsive.
+Key roles include:
+- **Data Gathering & Analysis** - Synthesizes traffic, demographic, environmental data
+- **Simulation & Scenario Modeling** - Tests policies before implementation
+- **Task Execution & Coordination** - Automates reports, GIS updates, permits
+- **Strategic Decision Support** - Supports systems thinking
+- **Persistent Knowledge & Memory** - Remembers past decisions and project history
+- **Participation & Mediation** - Facilitates citizen engagement
+
+It augments planners — helping humans focus on high-level strategy.
 
 ## Slide 17
-title: Agentic AI & Urban Planning
+title: From Doer to Orchestrator
 image: slide17.jpg
-notes: Real-time monitoring of urban systems enables ==dynamic adjustments== to plans as conditions change.
+notes: Agentic AI changes our role. We move from ==active executors to supervisors of digital labor==.
 
-The city becomes a living laboratory for continuous improvement.
-links:
-- https://example.com/gis-integration | GIS Integration Guide
+Instead of drawing every map, running every simulation, writing every report — we design systems that do it for us.
+
+Work shifts from execution to orchestration. From producing outputs to defining objectives.
+
+The value no longer lies in doing the task — but in ==deciding what should be done== and verifying the outcome.
 
 ## Slide 18
-title: Multi-Agents
+title: Agent Manager & Enterprise Operator
 image: slide18.jpg
-notes: ==Multi-agent systems== allow specialization where different agents handle different aspects of a problem.
+notes: In the Code AGI era, two roles emerge:
 
-One agent might focus on traffic, another on environmental impact, while a coordinator synthesizes their findings.
+**The Agent Manager** orchestrates digital workers. They coordinate agents, manage handoffs, supervise async processes, and ensure reliability.
+
+**The Enterprise Operator** defines strategy. They decide which problems are worth solving and align AI systems with organizational goals.
+
+Execution becomes cheap. ==Judgment becomes scarce==. The key skills shift toward systems thinking, domain expertise, critical evaluation, and workflow redesign.
+
+This is the new professional leverage.
 
 ## Slide 19
-title: Key Skills
+title: Risks: Autonomy Comes at a Cost
 image: slide19.jpg
-notes: Key skills for working with AI agents:
-- ==Prompt engineering== and effective communication
-- Understanding system limitations and failure modes
-- Ethical considerations and bias awareness
-- Integration with existing workflows
+notes: Agentic systems are powerful — but ==less predictable==.
+
+They are probabilistic. Errors compound across agents. Outputs can drift from human intent.
+
+Security becomes critical. Persistent agents require API access, file access, 24/7 permissions.
+
+There's also the energy question. Large-scale simulations and always-on agents consume significant compute.
+
+Autonomy increases capability — but also ==amplifies risk==. So architecture and guardrails become essential.
 
 ## Slide 20
-title: Thank You
+title: Governance: Who Is Responsible?
 image: slide20.jpg
-notes: Thank you! The future of research lies in ==human-AI collaboration==.
+notes: When AI moves from tool to actor, governance must evolve.
 
-Questions and discussion welcome.
+Who sets the goals? Who audits decisions? Who is accountable for unintended outcomes?
+
+Agentic Urban AI requires ==participatory oversight==, clear human-in-the-loop structures, and transparent evaluation.
+
+The future is not AI replacing planners. It's ==hybrid governance== — where humans remain strategically responsible.
