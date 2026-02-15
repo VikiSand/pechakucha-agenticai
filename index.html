@@ -15,17 +15,49 @@
             --text-secondary: #666666;
             --border-color: #e0e0e0;
             --color-teal: #2EB5A0;
-            --highlight-yellow: #FFC857;
+            --highlight-yellow: #ffff00;
+            --color-cyan: #00ffff;
+            --color-magenta: #ff00ff;
+            --color-yellow: #ffff00;
         }
 
-        body { font-family: 'DM Sans', sans-serif; background: var(--bg-color); color: var(--text-color); overflow: hidden; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--bg-color); color: var(--text-color); overflow: hidden; cursor: none; }
         html { scroll-behavior: smooth; }
+
+        /* CUSTOM CURSOR */
+        .custom-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--text-color);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+            mix-blend-mode: difference;
+        }
+
+        .cursor-dot {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0;
+            animation: fadeDot 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeDot {
+            0% { opacity: 0.8; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0.3); }
+        }
 
         .main-container { display: flex; height: 100vh; width: 100vw; }
 
-        /* NOTES PANEL */
-        .notes-panel { width: 35%; height: 100vh; background: #fafafa; border-right: 1px solid var(--border-color); overflow-y: auto; padding: 3rem 2rem; }
-        .notes-content { max-width: 500px; margin: 0 auto; }
+        /* NOTES PANEL - THINNER */
+        .notes-panel { width: 25%; height: 100vh; background: #fafafa; border-right: 1px solid var(--border-color); overflow-y: auto; padding: 3rem 2rem; }
+        .notes-content { max-width: 350px; margin: 0 auto; }
         .notes-content h1 { font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border-color); }
         .notes-content p { font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; color: var(--text-color); }
         .notes-content mark { background: var(--highlight-yellow); color: var(--text-color); padding: 0.1em 0.3em; border-radius: 3px; }
@@ -35,12 +67,27 @@
         .slide-section { opacity: 0.3; transition: opacity 0.3s ease; margin-bottom: 3rem; }
         .slide-section.active { opacity: 1; }
 
-        /* SLIDES PANEL */
-        .slides-panel { width: 65%; height: 100vh; position: relative; background: var(--bg-color); }
+        /* SLIDES PANEL - WIDER */
+        .slides-panel { width: 75%; height: 100vh; position: relative; background: var(--bg-color); }
         .presentation-container { width: 100%; height: 100%; overflow-y: auto; scroll-snap-type: y mandatory; }
         .slide { width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; scroll-snap-align: start; }
         .slide-media { width: 95%; height: 95vh; display: flex; align-items: center; justify-content: center; }
-        .slide-media img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+        .slide-media img, .slide-media video { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+        .slide-media iframe { width: 90%; height: 80vh; border: none; }
+
+        /* CURSOR-FOLLOWING TITLE */
+        .slide-title {
+            position: fixed;
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            pointer-events: none;
+            z-index: 9997;
+            white-space: nowrap;
+            max-width: 70vw;
+            line-height: 1.1;
+            color: var(--text-color);
+        }
 
         /* UI ELEMENTS */
         .session-title { position: fixed; top: 1.5rem; left: 2rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; z-index: 100; color: var(--text-secondary); }
@@ -49,7 +96,7 @@
         button { padding: 0.6rem 1.2rem; background: var(--bg-color); border: 1px solid var(--border-color); color: var(--text-color); font-family: 'DM Sans', sans-serif; font-size: 0.875rem; font-weight: 500; cursor: pointer; border-radius: 20px; transition: all 0.2s ease; }
         button:hover { background: var(--text-color); color: var(--bg-color); transform: translateY(-1px); }
         .timer-display { position: fixed; top: 1.5rem; right: 2rem; font-size: 0.875rem; font-weight: 500; color: var(--text-secondary); z-index: 100; }
-        .progress-bar { position: fixed; bottom: 0; left: 35%; right: 0; height: 3px; background: rgba(0,0,0,0.05); z-index: 100; }
+        .progress-bar { position: fixed; bottom: 0; left: 25%; right: 0; height: 3px; background: rgba(0,0,0,0.05); z-index: 100; }
         .progress-bar-fill { height: 100%; background: var(--color-teal); width: 0%; transition: width 0.3s ease; }
         .slide-number { position: absolute; bottom: 1.5rem; left: 2rem; font-size: 0.875rem; font-weight: 500; color: var(--text-secondary); background: rgba(255,255,255,0.9); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid var(--border-color); }
         .slide-sources { position: absolute; top: 1.5rem; right: 2rem; text-align: right; font-size: 0.7rem; z-index: 10; background: rgba(255,255,255,0.9); padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--border-color); max-width: 300px; }
@@ -58,7 +105,34 @@
         .slide-sources a:hover { color: var(--text-color); text-decoration: underline; }
         .loading { display: flex; align-items: center; justify-content: center; height: 100vh; color: var(--text-secondary); }
 
+        .sources-button {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 2rem;
+            padding: 0.6rem 1.2rem;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: all 0.2s ease;
+            z-index: 100;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .sources-button:hover {
+            background: var(--text-color);
+            color: var(--bg-color);
+            transform: translateY(-1px);
+        }
+
         @media (max-width: 768px) {
+            body { cursor: auto; }
+            .custom-cursor, .cursor-dot, .slide-title { display: none; }
             .main-container { flex-direction: column; }
             .notes-panel { width: 100%; height: 40vh; border-right: none; border-bottom: 1px solid var(--border-color); padding: 1.5rem 1rem; }
             .slides-panel { width: 100%; height: 60vh; }
@@ -70,6 +144,12 @@
 <body>
     <div class="loading" id="loading">Loading presentation...</div>
 
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+    
+    <!-- Cursor-Following Title -->
+    <div class="slide-title" id="slideTitle"></div>
+
     <div class="main-container" id="mainContainer" style="display: none;">
         <div class="notes-panel">
             <div class="session-title">Agentic AI & DRC - Speaker Notes</div>
@@ -80,6 +160,9 @@
             <div class="timer-display" id="timerDisplay">20s</div>
             <div class="presenter-info">Presented by [Your Name]<br>DRC Research Center</div>
             <div class="progress-bar"><div class="progress-bar-fill" id="progressBar"></div></div>
+            
+            <a href="sources.html" target="_blank" class="sources-button">📚 All Sources</a>
+            
             <div class="controls">
                 <button id="playPauseBtn">▶ Start</button>
                 <button id="prevBtn">← Prev</button>
@@ -92,6 +175,8 @@
 
     <script>
         const slideTime = 20000;
+        const colors = ['#00ffff', '#ff00ff', '#ffff00']; // Cyan, Magenta, Yellow
+        
         let currentSlideIndex = 0, isPlaying = false, timerInterval, timeRemaining = slideTime, slidesData = [];
         const playPauseBtn = document.getElementById('playPauseBtn');
         const prevBtn = document.getElementById('prevBtn');
@@ -103,10 +188,61 @@
         const presentationContainer = document.getElementById('presentationContainer');
         const mainContainer = document.getElementById('mainContainer');
         const loading = document.getElementById('loading');
+        const customCursor = document.getElementById('customCursor');
+        const slideTitle = document.getElementById('slideTitle');
+
+        let isMobile = window.innerWidth <= 768;
+
+        // Custom cursor with colorful bubbles
+        if (!isMobile) {
+            let lastDotTime = 0;
+            const dotInterval = 80;
+
+            document.addEventListener('mousemove', (e) => {
+                const x = e.clientX;
+                const y = e.clientY;
+                
+                customCursor.style.left = x + 'px';
+                customCursor.style.top = y + 'px';
+                
+                // Move title
+                const offsetX = 30;
+                const offsetY = -30;
+                slideTitle.style.transform = `translate(${x + offsetX}px, ${y + offsetY}px)`;
+                
+                // Create colorful bubbles
+                const now = Date.now();
+                if (now - lastDotTime > dotInterval) {
+                    createCursorDot(x, y);
+                    lastDotTime = now;
+                }
+            });
+        }
+
+        function createCursorDot(x, y) {
+            const dot = document.createElement('div');
+            dot.className = 'cursor-dot';
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            dot.style.backgroundColor = randomColor;
+            dot.style.left = x + 'px';
+            dot.style.top = y + 'px';
+            document.body.appendChild(dot);
+            
+            setTimeout(() => {
+                dot.remove();
+            }, 1500);
+        }
+
+        function extractYouTubeId(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
 
         async function loadSlides() {
             try {
-                const response = await fetch('slides.md');
+                const timestamp = new Date().getTime();
+                const response = await fetch(`slides.md?v=${timestamp}`);
                 if (!response.ok) throw new Error('Could not load slides.md');
                 const markdown = await response.text();
                 slidesData = parseMarkdown(markdown);
@@ -115,6 +251,7 @@
                 buildNotes();
                 loading.style.display = 'none';
                 mainContainer.style.display = 'flex';
+                updateSlideTitle();
             } catch (error) {
                 loading.innerHTML = `<div style="text-align:center;padding:2rem;"><p style="color:#EA5D4F;margin-bottom:1rem;">❌ ${error.message}</p><p style="font-size:0.875rem;">Make sure slides.md exists and you're running a local server.</p></div>`;
             }
@@ -125,12 +262,13 @@
             const slideBlocks = markdown.split(/^## Slide \d+/m).filter(b => b.trim());
             slideBlocks.forEach((block, index) => {
                 const lines = block.trim().split('\n');
-                const slide = { number: index + 1, title: '', image: '', notes: '', links: [] };
+                const slide = { number: index + 1, title: '', image: '', video: '', notes: '', links: [] };
                 let currentSection = '', notesLines = [];
                 lines.forEach(line => {
                     line = line.trim();
                     if (line.startsWith('title:')) slide.title = line.substring(6).trim();
                     else if (line.startsWith('image:')) slide.image = line.substring(6).trim();
+                    else if (line.startsWith('video:')) slide.video = line.substring(6).trim();
                     else if (line.startsWith('notes:')) { currentSection = 'notes'; const n = line.substring(6).trim(); if (n) notesLines.push(n); }
                     else if (line.startsWith('links:')) currentSection = 'links';
                     else if (line.startsWith('-') && currentSection === 'links') {
@@ -154,6 +292,8 @@
                 const slideEl = document.createElement('div');
                 slideEl.className = 'slide';
                 slideEl.setAttribute('data-slide-id', `slide${String(slide.number).padStart(2, '0')}`);
+                slideEl.setAttribute('data-title', slide.title);
+                
                 if (slide.links.length > 0) {
                     const sourcesEl = document.createElement('div');
                     sourcesEl.className = 'slide-sources';
@@ -166,14 +306,33 @@
                     });
                     slideEl.appendChild(sourcesEl);
                 }
+                
                 const mediaEl = document.createElement('div');
                 mediaEl.className = 'slide-media';
-                if (slide.image) {
+                
+                if (slide.video) {
+                    // Check if it's a YouTube URL
+                    const youtubeId = extractYouTubeId(slide.video);
+                    if (youtubeId) {
+                        const iframe = document.createElement('iframe');
+                        iframe.src = `https://www.youtube.com/embed/${youtubeId}`;
+                        iframe.setAttribute('allowfullscreen', '');
+                        iframe.setAttribute('frameborder', '0');
+                        mediaEl.appendChild(iframe);
+                    } else {
+                        // Local video file
+                        const video = document.createElement('video');
+                        video.src = `videos/${slide.video}`;
+                        video.controls = true;
+                        mediaEl.appendChild(video);
+                    }
+                } else if (slide.image) {
                     const img = document.createElement('img');
                     img.src = `images/${slide.image}`;
                     img.alt = slide.title;
                     mediaEl.appendChild(img);
                 }
+                
                 slideEl.appendChild(mediaEl);
                 const numberEl = document.createElement('div');
                 numberEl.className = 'slide-number';
@@ -213,11 +372,20 @@
                             currentSlideIndex = idx;
                             updateProgress();
                             updateActiveNotes();
+                            updateSlideTitle();
                         }
                     }
                 });
             }, { threshold: 0.5 });
             slides.forEach(slide => observer.observe(slide));
+        }
+
+        function updateSlideTitle() {
+            const slides = document.querySelectorAll('.slide');
+            if (slides.length > 0) {
+                const title = slides[currentSlideIndex].getAttribute('data-title');
+                slideTitle.textContent = title || '';
+            }
         }
 
         function updateActiveNotes() {
@@ -239,6 +407,7 @@
             slides[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
             updateProgress();
             updateActiveNotes();
+            updateSlideTitle();
             resetSlideTimer();
         }
 
@@ -274,6 +443,8 @@
             else if (e.key === 'Enter') { e.preventDefault(); isPlaying ? pause() : play(); }
             else if (e.key === 'r' || e.key === 'R') { e.preventDefault(); reset(); }
         });
+
+        window.addEventListener('resize', () => { isMobile = window.innerWidth <= 768; });
 
         loadSlides();
         updateProgress();
