@@ -1,7 +1,7 @@
 
 ## Slide 01
-title: Agentic AI & DRC
-image: slide01.JPG
+title: i love dan
+image: slide05.JPG
 notes: Welcome everyone! Today we're exploring ==Agentic AI== and its applications at the DRC Research Center.
 links:
 - https://www.anthropic.com/research | Anthropic Research
