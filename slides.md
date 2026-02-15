@@ -1,7 +1,7 @@
 ## Slide 01
 title: Agentic AI & DRC
 image: slide01.JPG
-notes: Hi
+notes: Hi.
 
 ## Slide 02
 title: 2025: The Year of the Agent (That Wasn't)
