@@ -1,6 +1,6 @@
 ## Slide 01
 title: Agentic AI & DRC
-image: slide01.jpg
+image: slide01.JPG
 notes: Hi
 
 ## Slide 02
