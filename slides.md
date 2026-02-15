@@ -1,19 +1,29 @@
+
 ## Slide 01
 title: Agentic AI & DRC
 image: slide01.jpg
 notes: Welcome everyone! Today we're exploring ==Agentic AI== and its applications at the DRC Research Center.
-
-This is a transformative technology that's changing how we approach ==urban planning== and research methodologies.
 links:
 - https://www.anthropic.com/research | Anthropic Research
 - https://openai.com/research | OpenAI Research
 
 ## Slide 02
-title: year or decade
-image: slide02.jpg
-notes: The question isn't whether AI agents will transform our field - it's whether the change will take a year or a decade.
+title: 2025: The Year of the Agent (That Wasn’t)
+image: ChatGPT Image Feb 15, 2026, 06_43_56 PM.png
+notes: 2025 was declared the year of Agentic AI.  
+Sam Altman predicted autonomous digital workers would transform how we operate.
 
-Current adoption rates suggest we're at an ==inflection point==. The technology is mature enough for practical applications.
+But it didn’t really happen.  
+Agents were impressive in demos — unreliable in production.
+
+The problem wasn’t intelligence.  
+It was architecture.
+
+So now the question is:  
+Was the hype wrong — or was the system design wrong?
+links:
+- https://fortune.com/2025/12/15/agentic-artificial-intelligence-automation-capital-one/
+- https://skooloflife.medium.com/the-agentic-ai-delusion-why-silicon-valley-spent-billions-on-the-wrong-architecture-d14e4488bd70 
 
 ## Slide 03
 title: why now?
