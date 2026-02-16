@@ -182,7 +182,7 @@ It augments planners — helping humans focus on high-level strategy.
 
 ## Slide 18
 title: From Doer to Orchestrator
-image: 
+image: doers-and-thinkers.png
 notes: Agentic AI changes our role. We move from ==active executors to supervisors of digital labor==.
 
 Instead of drawing every map, running every simulation, writing every report — we design systems that do it for us.
