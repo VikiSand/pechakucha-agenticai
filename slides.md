@@ -202,7 +202,7 @@ notes: In the Code AGI era, two roles emerge:
 
 ## Slide 20
 title: Agent Manager & Enterprise Operator
-image: Picture3.jpg
+image: Slide20.JPG
 notes:
 
 **The Enterprise Operator** defines strategy. They decide which problems are worth solving and align AI systems with organizational goals.
