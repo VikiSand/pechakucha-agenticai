@@ -46,6 +46,8 @@ This transforms AI from tool into infrastructure.
 links:
 - https://www.moltbook.com/ | Molt Book
 - https://openclaw.ai/ | OpenClaw Platform
+- https://www.youtube.com/watch?v=rRzWzvgNSfc
+- https://www.youtube.com/watch?v=YFjfBk8HI5o
 
 ## Slide 06
 title: The AI Adoption Gap
