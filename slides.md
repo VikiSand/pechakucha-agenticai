@@ -24,7 +24,7 @@ We moved from prompt engineering → workflows → tool use → orchestration.
 
 The shift wasn't just smarter AI. It was the ==ecosystem becoming executable==. And as AI fluency grows over time, humans and organizations can now reliably build and manage complex agent interactions.
 links:
-- https://engineeringenablement.substack.com/p/your-7-step-ai-upskilling-roadmap
+- https://engineeringenablement.substack.com/p/your-7-step-ai-upskilling-roadmap  | Your 7 Step AI upkilling roadmap
 
 ## Slide 04
 title: The Paradigm Shift
@@ -46,8 +46,8 @@ This transforms AI from tool into infrastructure.
 links:
 - https://www.moltbook.com/ | Molt Book
 - https://openclaw.ai/ | OpenClaw Platform
-- https://www.youtube.com/watch?v=rRzWzvgNSfc
-- https://www.youtube.com/watch?v=YFjfBk8HI5o
+- https://www.youtube.com/watch?v=rRzWzvgNSfc | OpenClaw: The Viral AI Agent that Broke the Internet - Peter Steinberger | Lex Fridman Podcast 
+- https://www.youtube.com/watch?v=YFjfBk8HI5o | Lex Friedman shorts
 
 ## Slide 06
 title: The AI Adoption Gap
@@ -155,7 +155,8 @@ links:
 
 ## Slide 16
 title: City AI (CDAI)
-image: Slide18.JPG
+video: https://www.youtube.com/watch?v=NUGfJmLnn4A
+
 notes: ==City AI automates complex urban analytics==. Instead of manually buffering maps or intersecting GIS layers, planners ask a question in natural language.
 
 Behind the scenes, specialized agents collaborate: A **Project Manager** breaks down the task. A **Data Agent** retrieves datasets. A **Visualization Agent** presents results.
