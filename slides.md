@@ -190,6 +190,8 @@ Instead of drawing every map, running every simulation, writing every report —
 Work shifts from execution to orchestration. From producing outputs to defining objectives.
 
 The value no longer lies in doing the task — but in ==deciding what should be done== and verifying the outcome.
+links:
+- https://share.google/K74LpSQLNG27NGTE9 | doers vs thinkers
 
 ## Slide 19
 title: Agent Manager & Enterprise Operator
